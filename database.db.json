@@ -1,0 +1,19 @@
+{
+	"cities": [
+		{
+			"name": "Nis",
+			"image": "/Nis.JPG"
+			
+		},
+		{
+			"name": "Leskovac",
+			"image": "/Leskovac.JPG"
+			
+		},
+		{
+			"name": "Vlasotince",
+			"image": "/Vlasotince.JPG"
+			
+		}
+	]
+}

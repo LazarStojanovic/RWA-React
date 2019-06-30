@@ -1,26 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import './App.css'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+//Redux imports
+import { Provider } from 'react-redux';
+import { createStore,applyMiddleware} from 'redux';
+import { rootReducer } from './store';
+//Saga imports
+import createSagaMiddleware from '@redux-saga/core';
+import { rootSaga } from './store/sagas';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Component imports
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './components/home';
+import News from './components/news';
+import Contact from './components/contact';
+import About from './components/about';
+import City from './components/city';
+
+//Service imports
+import { fetchCities } from './store/actions';
+
+//App
+const sagaMiddleware = createSagaMiddleware();
+
+export const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(rootSaga);
+class App extends Component {
+  componentWillMount() {
+    store.dispatch(fetchCities())
+  }
+  render() {
+    return (
+      <Router>
+        <Provider store={store}>
+          <div className="App">
+            <Header />
+            <Switch>
+              <Route path='/' exact component={Home}/>
+              <Route path='/news'  component={News}/>
+              <Route path='/contact'  component={Contact}/>
+              <Route path='/about' component={About}/>
+              <Route path= '/city'component={City}/>
+            </Switch>
+            <Footer />
+          </div>
+        </Provider>
+      </Router>
+    )
+  };
 }
 
 export default App;
+/*
+const App: React.FC = () => {
+  return (
+    <Provider store={store}>
+    <div className="App">
+      <p>YelpSerbia</p>
+      <Header />
+      <button onClick={() => store.dispatch(fetchCities())}>Fetch Cities</button>
+    </div>
+    </Provider>
+  );
+}
+
+*/

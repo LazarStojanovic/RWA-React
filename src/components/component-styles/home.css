@@ -1,0 +1,19 @@
+.wraper{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: url('/backgroundHome.JPG') no-repeat center;
+    object-fit: contain;
+}
+
+.container{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}

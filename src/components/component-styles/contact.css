@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+}
+
+.contactSection{
+    background: url('/bg.jpeg') no-repeat center;
+    height: 100vh;
+    padding: 24vh 0;
+    transition: 0.5;
+}
+
+.contactSection h1{
+    text-align: center;
+    color: #ddd;
+}
+
+.contactSection p{
+    text-align: center;
+    color: #ddd;
+    padding: 1vh
+}
