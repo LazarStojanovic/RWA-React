@@ -1,6 +1,9 @@
-import React,{Component} from 'react';
 import { City } from '../models/City';
-
+import React, { Component, Dispatch} from 'react';
+import { Action} from 'redux';
+import { AppState } from '../store';
+import { connect } from 'react-redux';
+import './component-styles/city.css'
 
 
 interface Props {
@@ -13,15 +16,33 @@ interface Props {
 
 
 class CityComponent extends Component<State , Props> {
-   
+  
     render() {
       return (
-        <div>
-           <h1>{this.props.city.name}</h1>
+        <div className='wraperCity'>
+            <div className='containerCity'>
+              <div>
+                <h1>{this.props.city.name}</h1>
+              </div>
+            </div>
         </div>
         
       )
     };
   }
 
-  export default CityComponent;
+  function mapStateToProps(state: AppState) {
+    return {
+      // prop name <= store slice
+      city: state.city
+    };
+  }
+  function mapDispatchToProps(dispatch: Dispatch<Action>) {
+    return {
+          
+        
+          
+    };
+  }
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(CityComponent);

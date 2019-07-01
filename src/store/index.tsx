@@ -5,7 +5,7 @@ import { City } from '../models/City';
 
 export interface AppState {
     cities?: City[];
-    city?: City;
+    city: City;
 }
 
 

@@ -29,7 +29,7 @@ class Home extends Component<Props, State> {
         <div className='wraper'>
             <div className='container'>
                 {this.props.cities.map((city: City) => (
-                  <Link to='/city'><Card city={city} onClick = {(city:City) => sendDataToCityComponent(city) }/></Link>
+                  <Link to='/city'><Card city={city} /></Link>
               ))}
             </div>
         </div>
@@ -47,7 +47,7 @@ class Home extends Component<Props, State> {
   function mapDispatchToProps(dispatch: Dispatch<Action>) {
     return {
           
-        sendDataToCityComponent: (city: City) => dispatch(sendDataToCityComponent(city)),
+      
           
     };
   }
