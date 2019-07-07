@@ -20,7 +20,6 @@ class Home extends Component<Props, State> {
    
     render() {
       if (!this.props.cities) {
-        //if (!this.props.books || !this.props.selected || !this.p) {
         return <h1>No Cities</h1>;
       }
       return (

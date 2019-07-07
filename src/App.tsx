@@ -17,9 +17,13 @@ import News from './components/news';
 import Contact from './components/contact';
 import About from './components/about';
 import City from './components/city';
+import Restaurants from './components/restaurants';
+import Cinemas from './components/cinemas';
 
 //Service imports
 import { fetchCities } from './store/actions';
+import { fetchRestaurants } from './store/restaurantsActions';
+import { fetchCinemas } from './store/cinemasActions';
 
 //App
 const sagaMiddleware = createSagaMiddleware();
@@ -29,6 +33,8 @@ sagaMiddleware.run(rootSaga);
 class App extends Component {
   componentWillMount() {
     store.dispatch(fetchCities())
+    store.dispatch(fetchRestaurants())
+    store.dispatch(fetchCinemas())
   }
   render() {
     return (
@@ -42,6 +48,8 @@ class App extends Component {
               <Route path='/contact'  component={Contact}/>
               <Route path='/about' component={About}/>
               <Route path= '/city'component={City}/>
+              <Route path= '/restaurants'component={Restaurants}/>
+              <Route path= '/cinemas'component={Cinemas}/>
             </Switch>
             <Footer />
           </div>

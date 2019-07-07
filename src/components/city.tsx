@@ -3,6 +3,7 @@ import React, { Component, Dispatch} from 'react';
 import { Action} from 'redux';
 import { AppState } from '../store';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import './component-styles/city.css'
 
 
@@ -16,13 +17,14 @@ interface Props {
 
 
 class CityComponent extends Component<State , Props> {
-  
     render() {
       return (
         <div className='wraperCity'>
             <div className='containerCity'>
               <div>
                 <h1>{this.props.city.name}</h1>
+                <Link to='/restaurants'><h2 className='Naslov'>Restorani</h2></Link>
+                <Link to='/cinemas'><h2 className='Naslov'>Bioskopi</h2></Link>
               </div>
             </div>
         </div>

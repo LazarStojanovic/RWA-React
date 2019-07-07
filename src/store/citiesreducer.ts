@@ -17,7 +17,7 @@ const initialState: City[] =  [
 
 
 
-export function cityreducer(
+export function cityReducer(
     state: City[] = initialState,
     action: Action
 ){
@@ -32,4 +32,4 @@ export function cityreducer(
     
 }
 
-export default cityreducer;
+export default cityReducer;
