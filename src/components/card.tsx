@@ -17,20 +17,9 @@ interface Props {
 
   
 class Card extends Component<Props,State> {
-    state = this.props;
-    constructor(props: Props) {
-    super(props);
-	}
-  
     render() {
       return (
-        
-      <div className='box' onClick = {() => { 
-              const newState:City = { 
-                        name: this.state.city.name, 
-                        image: this.state.city.image, 
-                        description: this.state.city.description};
-                        this.props.addData(newState)}}>
+      <div className='box' onClick = {() => {this.props.addData(this.props.city)}}>
           <div className='imgBox'>
               <img src={this.props.city.image} alt="slika"/> 
           </div>
@@ -58,3 +47,15 @@ class Card extends Component<Props,State> {
   }
   
   export default connect(mapStateToProps,mapDispatchToProps)(Card);
+
+
+  /*
+  <div className='box' onClick = {() => { 
+              const newState:City = { 
+                        id:this.state.city.id,
+                        name: this.state.city.name, 
+                        image: this.state.city.image, 
+                        description: this.state.city.description};
+                        this.props.addData(newState)}}>
+
+  */

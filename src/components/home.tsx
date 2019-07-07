@@ -6,7 +6,6 @@ import { City } from '../models/City';
 import './component-styles/home.css'
 import Card from './card';
 import {Link} from 'react-router-dom';
-import { sendDataToCityComponent } from '../store/actions';
 
 interface Props {
   cities?: City[];

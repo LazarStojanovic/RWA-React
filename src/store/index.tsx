@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import cityreducer from './cityreducer';
+import citiesreducer from './citiesreducer';
 import cityComponentReducer from './cityComponentReducer';
 import { City } from '../models/City';
 
@@ -10,6 +10,6 @@ export interface AppState {
 
 
 export const rootReducer = combineReducers({
-    cities: cityreducer,
+    cities: citiesreducer,
     city: cityComponentReducer
 });
