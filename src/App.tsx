@@ -24,7 +24,7 @@ import Cinemas from './components/cinemas';
 import { fetchCities } from './store/actions';
 import { fetchRestaurants } from './store/restaurantsActions';
 import { fetchCinemas } from './store/cinemasActions';
-
+import {fetchCategories} from './store/categoryActions';
 //App
 const sagaMiddleware = createSagaMiddleware();
 
@@ -35,6 +35,7 @@ class App extends Component {
     store.dispatch(fetchCities())
     store.dispatch(fetchRestaurants())
     store.dispatch(fetchCinemas())
+    store.dispatch(fetchCategories())
   }
   render() {
     return (
@@ -48,8 +49,8 @@ class App extends Component {
               <Route path='/contact'  component={Contact}/>
               <Route path='/about' component={About}/>
               <Route path= '/city'component={City}/>
-              <Route path= '/restaurants'component={Restaurants}/>
-              <Route path= '/cinemas'component={Cinemas}/>
+              <Route path= '/Restaurant'component={Restaurants}/>
+              <Route path= '/Cinema'component={Cinemas}/>
             </Switch>
             <Footer />
           </div>

@@ -1,5 +1,6 @@
 import { Action } from 'redux';
 import {Cinema} from '../models/Cinema';
+
 import {
 	ADD_CINEMAS,
 	AddCinemas
@@ -8,7 +9,7 @@ const initialState: Cinema[] =  [
     {
         id: 1,
         name: 'Neki Bg Cinema',
-        Adress: "Neka Adresa",
+        adress: "Neka Adresa",
         cityId: 1
     }
 ]
@@ -24,7 +25,6 @@ export function cinemasReducer(
         case ADD_CINEMAS:
             const { cinemas } = action as AddCinemas;
             return [...state,...cinemas ];
-            
          default:
                 return state;
     }

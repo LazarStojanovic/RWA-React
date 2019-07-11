@@ -9,7 +9,7 @@ export interface FetchRestaurants extends Action {}
 export interface AddRestaurants extends Action {
 	restaurants: Restaurant[];
 }
-export interface sendDataToRestaurantComponent extends Action {
+export interface selectedRestaurantItem extends Action {
 	restaurant: Restaurant;
 }
 export function fetchRestaurants(): FetchRestaurants {
@@ -25,7 +25,7 @@ export function addRestaurants(restaurants: Restaurant[]): AddRestaurants {
 	};
 }
 
-export function sendDataToRestaurantComponent(restaurant: Restaurant): sendDataToRestaurantComponent{
+export function selectedRestaurantItem(restaurant: Restaurant): selectedRestaurantItem{
 	return{
 		type: SEND_RESTAURANT_DATA,
 		restaurant: restaurant

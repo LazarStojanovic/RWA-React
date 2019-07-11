@@ -9,7 +9,7 @@ export interface FetchCinemas extends Action {}
 export interface AddCinemas extends Action {
 	cinemas: Cinema[];
 }
-export interface sendDataToCinemasComponent extends Action {
+export interface selectedCinemaItem extends Action {
 	cinema: Cinema;
 }
 export function fetchCinemas(): FetchCinemas {
@@ -25,7 +25,7 @@ export function addCinemas(cinemas: Cinema[]): AddCinemas {
 	};
 }
 
-export function sendDataToCinemasComponent(cinema: Cinema): sendDataToCinemasComponent{
+export function selectedCinemaItem(cinema: Cinema): selectedCinemaItem{
 	return{
 		type: SEND_CINEMAS_DATA,
 		cinema: cinema

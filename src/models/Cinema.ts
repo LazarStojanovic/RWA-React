@@ -1,6 +1,6 @@
 export interface Cinema{
-    id: number,
-    name: string,
-    Adress: string,
-    cityId: number
+    id: number;
+    name: string;
+    adress: string;
+    cityId: number;
 }

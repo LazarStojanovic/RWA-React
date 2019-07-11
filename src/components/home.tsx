@@ -38,15 +38,11 @@ class Home extends Component<Props, State> {
 
   function mapStateToProps(state: AppState) {
     return {
-      // prop name <= store slice
       cities: state.cities
     };
   }
   function mapDispatchToProps(dispatch: Dispatch<Action>) {
     return {
-          
-      
-          
     };
   }
   

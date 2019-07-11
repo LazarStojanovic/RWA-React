@@ -5,10 +5,13 @@ import { AppState } from '../store';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import './component-styles/city.css'
+import { Category } from '../models/Category';
+import CategoryCard from './categoryCard';
 
 
 interface Props {
     city: City;
+    categories: Category[];
   }
   
   interface State {
@@ -16,16 +19,14 @@ interface Props {
   }
 
 
-class CityComponent extends Component<State , Props> {
+class CityComponent extends Component< Props,State> {
     render() {
       return (
-        <div className='wraperCity'>
-            <div className='containerCity'>
-              <div>
-                <h1>{this.props.city.name}</h1>
-                <Link to='/restaurants'><h2 className='Naslov'>Restorani</h2></Link>
-                <Link to='/cinemas'><h2 className='Naslov'>Bioskopi</h2></Link>
-              </div>
+        <div className='wraper'>
+            <div className='container'>
+              {this.props.categories.filter((category: Category)=> category.name != '').map((category: Category) => (
+                <Link to = {'/' + category.name}><CategoryCard category ={category}/></Link>
+              ))}
             </div>
         </div>
         
@@ -36,7 +37,8 @@ class CityComponent extends Component<State , Props> {
   function mapStateToProps(state: AppState) {
     return {
       // prop name <= store slice
-      city: state.city
+      city: state.city,
+      categories: state.categories
     };
   }
   function mapDispatchToProps(dispatch: Dispatch<Action>) {

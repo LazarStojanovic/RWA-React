@@ -7,7 +7,8 @@ import {Link} from 'react-router-dom';
 import './component-styles/restaurants.css'
 import { fetchRestaurants } from '../store/restaurantsActions';
 import { City } from '../models/City';
-
+import SideBarRestaurants from './sideBarRestaurants';
+import RestaurantReviewsComponent from './restaurantReviewsComponent';
 
 interface Props {
     restaurants: Restaurant[];
@@ -23,11 +24,14 @@ class RestaurantsComponent extends Component<Props , State> {
     render() {
       return (
         <div>
-            <div>
-                <h1>Restorani</h1>
-                <div>{this.props.restaurants.filter((restaurant: Restaurant) => restaurant.cityId === this.props.city.id ).map((restaurant: Restaurant) => ( <h1>{restaurant.name}</h1>))}</div>
-                
+          <div className ='grid'>
+            <div className ='sideBar' >
+                <SideBarRestaurants/>
             </div>
+            <div className ='resourceContent' > 
+                  <RestaurantReviewsComponent/>
+            </div>
+          </div>
         </div>
         
       )

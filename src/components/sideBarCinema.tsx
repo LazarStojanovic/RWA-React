@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import './component-styles/cinemas.css'
 import { City } from '../models/City';
-import SideBarCinema from './sideBarCinema';
-import CinemaReviewsComponent from './cinemaReviewsComponent';
+import SideBarCinemaItem from './sideBarCinemaItem';
+
 
 interface Props {
     cinemas: Cinema[];
@@ -19,20 +19,14 @@ interface Props {
   }
 
 
-class CinemasComponent extends Component<Props , State> {
+class SideBarCinema extends Component<Props , State> {
     render() {
       return (
         <div>
-          <div className ='grid'>
-            <div className ='sideBar' >
-                <SideBarCinema/>
-            </div>
-            <div className ='resourceContent' > 
-                  <CinemaReviewsComponent/>
-            </div>
-          </div>
-        </div>
-        
+          {this.props.cinemas
+                            .filter((cinema: Cinema) => cinema.cityId === this.props.city.id )
+                            .map((cinema: Cinema) => ( <SideBarCinemaItem cinema = {cinema}/>))}
+        </div>  
       )
     };
   }
@@ -51,4 +45,4 @@ class CinemasComponent extends Component<Props , State> {
     };
   }
   
-  export default connect(mapStateToProps,mapDispatchToProps)(CinemasComponent);
+  export default connect(mapStateToProps,mapDispatchToProps)(SideBarCinema);

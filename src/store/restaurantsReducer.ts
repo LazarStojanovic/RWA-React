@@ -8,7 +8,7 @@ const initialState: Restaurant[] =  [
     {
         id: 1,
         name: 'Neki Bg Restoran',
-        Adress: "Neka Adresa",
+        adress: "Neka Adresa",
         cityId: 1
     }
 ]
