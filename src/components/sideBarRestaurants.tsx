@@ -2,7 +2,7 @@ import React, { Component, Dispatch} from 'react';
 import { Action} from 'redux';
 import { AppState } from '../store';
 import { connect } from 'react-redux';
-import './component-styles/restaurants.css'
+import './component-styles/sideBarRestaurants.css'
 import { City } from '../models/City';
 import SideBarRestaurantItem from './sideBarRestaurantItem';
 import { Restaurant } from '../models/Restaurant';
@@ -21,7 +21,7 @@ interface Props {
 class SideBarRestaurant extends Component<Props , State> {
     render() {
       return (
-        <div>
+        <div className ="barContainer">
           {this.props.restaurants
                             .filter((restaurant: Restaurant) => restaurant.cityId === this.props.city.id )
                             .map((restaurant: Restaurant) => ( <SideBarRestaurantItem restaurant = {restaurant}/>))}

@@ -5,10 +5,18 @@
 
 .grid{
     display: grid;
-    grid-template-columns: 17vw 83vw;
+    grid-template-columns: 17vw 82vw;
+    grid-template-rows: 90vh;
+    background: url('/sideBar.JPG') no-repeat ;
 }
 
 .sideBar{
     grid-column-start: 1;
     grid-column-end: 2;
+    
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    
 }
+

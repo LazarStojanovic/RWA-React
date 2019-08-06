@@ -3,25 +3,30 @@ import React, { Component, Dispatch} from 'react';
 import { Action} from 'redux';
 import { AppState } from '../store';
 import { connect } from 'react-redux';
-import './component-styles/cinemas.css'
-
+import './component-styles/restaurantReviewsComponent.css'
+import { Review } from '../models/Review';
+import ReviewsComponentItem from './reviewsComponentItem';
 
 
 
 interface Props {
     selectedRestaurant: Restaurant;
+    reviews: Review[];
   }
   
   interface State {
     restaurant: Restaurant;
+    reviews: Review[];
   }
 
 
 class RestaurantReviewsComponent extends Component<Props , State> {
     render() {
       return (
-        <div>
-            <h2>{this.props.selectedRestaurant.name}</h2>
+        <div className='reviewsComponentBody'>
+            {this.props.reviews
+                            .filter((review: Review) => review.restaurantId === this.props.selectedRestaurant.id )
+                            .map((review: Review) => ( <ReviewsComponentItem review = {review}/>))}
         </div>  
       )
     };
@@ -29,7 +34,8 @@ class RestaurantReviewsComponent extends Component<Props , State> {
 
   function mapStateToProps(state: AppState) {
     return {
-        selectedRestaurant: state.selectedRestaurant
+        selectedRestaurant: state.selectedRestaurant,
+        reviews: state.reviews
     };
   }
   function mapDispatchToProps(dispatch: Dispatch<Action>) {

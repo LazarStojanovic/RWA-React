@@ -1,0 +1,9 @@
+.reviewsComponentItem{
+    color:white;
+    border-style: solid;
+    border-color:white;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 3px;
+}

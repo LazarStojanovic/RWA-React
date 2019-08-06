@@ -9,7 +9,9 @@ import { City } from '../models/City';
 import { Restaurant } from '../models/Restaurant';
 import { Cinema } from '../models/Cinema';
 import { Category} from '../models/Category';
+import { Review} from '../models/Review';
 import selectedRestaurantReducer from './selected-restaurant-reducer';
+import reviewsReducer from './reviewsReducer';
 
 
 
@@ -23,6 +25,7 @@ export interface AppState {
     categories: Category[];
     selectedCinema: Cinema;
     selectedRestaurant: Restaurant;
+    reviews: Review[];
 }
 
 
@@ -33,5 +36,6 @@ export const rootReducer = combineReducers({
     cinemas: cinemasReducer,
     selectedCinema: selectedCinemaReducer,
     selectedRestaurant: selectedRestaurantReducer,
-    categories: categoryReducer
+    categories: categoryReducer,
+    reviews: reviewsReducer
 });

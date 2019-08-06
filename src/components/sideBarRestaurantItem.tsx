@@ -3,7 +3,7 @@ import React, { Component, Dispatch} from 'react';
 import { Action} from 'redux';
 import { AppState } from '../store';
 import { connect } from 'react-redux';
-import './component-styles/restaurants.css'
+import './component-styles/sideBarRestaurantItem.css'
 import { selectedRestaurantItem } from '../store/restaurantsActions';
 
 
@@ -21,8 +21,9 @@ interface Props {
 class SideBarRestaurantItem extends Component<Props , State> {
     render() {
       return (
-        <div onClick ={() => { this.props.clickedItem(this.props.restaurant)}}>
+        <div className ='sideBarItem' onClick ={() => { this.props.clickedItem(this.props.restaurant)}}>
             <h2>{this.props.restaurant.name}</h2>
+            <h3>{this.props.restaurant.adress}</h3>
         </div>  
       )
     };
