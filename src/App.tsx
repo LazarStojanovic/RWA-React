@@ -10,22 +10,22 @@ import createSagaMiddleware from '@redux-saga/core';
 import { rootSaga } from './store/sagas';
 
 //Component imports
-import Header from './components/header';
-import Footer from './components/footer';
-import Home from './components/home';
-import News from './components/news';
-import Contact from './components/contact';
-import About from './components/about';
-import City from './components/city';
-import Restaurants from './components/restaurants';
-import Cinemas from './components/cinemas';
+import Header from './components/page-components/header';
+import Footer from './components/page-components/footer';
+import Home from './components/page-components/header-components/home';
+import News from './components/page-components/header-components/news';
+import Contact from './components/page-components/header-components/contact';
+import About from './components/page-components/header-components/about';
+import City from './components/page-components/header-components/home-components/city';
+import Restaurants from './components/page-components/header-components/home-components/category-component/restaurant-components/restaurants';
+import Cinemas from './components/page-components/header-components/home-components/category-component/cinema-components/cinemas';
 
 //Service imports
-import { fetchCities } from './store/actions';
-import { fetchRestaurants } from './store/restaurantsActions';
-import { fetchCinemas } from './store/cinemasActions';
-import {fetchCategories} from './store/categoryActions';
-import { fetchReviews } from './store/reviewsActions';
+import { fetchCities } from './store/actions/cityActions';
+import { fetchRestaurants } from './store/actions/restaurantsActions';
+import { fetchCinemas } from './store/actions/cinemasActions';
+import {fetchCategories} from './store/actions/categoryActions';
+import { fetchReviews } from './store/actions/reviewsActions';
 //App
 const sagaMiddleware = createSagaMiddleware();
 

@@ -1,9 +1,9 @@
 import { put,takeLatest } from 'redux-saga/effects';
-import { FETCH_CITIES, addCities } from './actions';
-import { FETCH_RESTAURANTS, addRestaurants } from './restaurantsActions';
-import { FETCH_CINEMAS, addCinemas } from './cinemasActions';
-import { FETCH_CATEGORIES,addCategories} from './categoryActions';
-import { FETCH_REVIEWS, addReviews} from './reviewsActions';
+import { FETCH_CITIES, addCities } from './actions/cityActions';
+import { FETCH_RESTAURANTS, addRestaurants } from './actions/restaurantsActions';
+import { FETCH_CINEMAS, addCinemas } from './actions/cinemasActions';
+import { FETCH_CATEGORIES,addCategories} from './actions/categoryActions';
+import { FETCH_REVIEWS, addReviews} from './actions/reviewsActions';
 import { getAllCities } from '../services/cities.service';
 import { getAllRestaurants } from '../services/restaurants.service';
 import { getAllCinemas } from '../services/cinemas.service';

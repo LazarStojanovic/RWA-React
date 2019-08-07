@@ -1,21 +1,17 @@
 import { combineReducers } from 'redux';
-import citiesReducer from './citiesReducer';
-import cityComponentReducer from './cityComponentReducer';
-import restaurantsReducer from './restaurantsReducer';
-import cinemasReducer from './cinemaReducer';
-import categoryReducer from './categoryReducer';
-import selectedCinemaReducer from './selected-cinema-reducer';
 import { City } from '../models/City';
 import { Restaurant } from '../models/Restaurant';
 import { Cinema } from '../models/Cinema';
 import { Category} from '../models/Category';
 import { Review} from '../models/Review';
-import selectedRestaurantReducer from './selected-restaurant-reducer';
-import reviewsReducer from './reviewsReducer';
-
-
-
-
+import citiesReducer from './reducers/citiesReducer';
+import cityComponentReducer from './reducers/cityComponentReducer';
+import restaurantsReducer from './reducers/restaurantsReducer';
+import cinemasReducer from './reducers/cinemaReducer';
+import categoryReducer from './reducers/categoryReducer';
+import selectedCinemaReducer from './reducers/selected-cinema-reducer';
+import selectedRestaurantReducer from './reducers/selected-restaurant-reducer';
+import reviewsReducer from './reducers/reviewsReducer';
 
 export interface AppState {
     cities?: City[];
@@ -27,7 +23,6 @@ export interface AppState {
     selectedRestaurant: Restaurant;
     reviews: Review[];
 }
-
 
 export const rootReducer = combineReducers({
     cities: citiesReducer,
