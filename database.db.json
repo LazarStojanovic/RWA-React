@@ -1,159 +1,152 @@
 {
-	"cities": [
-		{
-			"id": 2,
-			"name": "Nis",
-			"image": "/Nis.JPG",
-			"description": "Ниш је највећи град у југоисточној Србији и седиште Нишавског управног округа. На подручју Града Ниша је, према попису из 2011, живело 260.237 становника, док је у самом насељеном месту живело 183.164 становника,[1] па је тако по броју становника Ниш трећи град по величини у Србији (после Београда и Новог Сада)."
-			
-		},
-		{
-			"id": 3,
-			"name": "Leskovac",
-			"image": "/Leskovac.JPG",
-			"description": "Лесковац је градско насеље и административни центар истоимене територијалне јединице и Јабланичког управног округа. Статус града добио је 2007. године. Град се налази у Лесковачкој котлини, познатој по српском петоречју. Према попису из 2011, у самом Лесковцу живело је 60.288 становника, док је на подручју града Лесковца живело 144.206 становника."
-			
-		}
-	],
-	"restaurants":[
-		{
-			"id": 2,
-			"name":"Cap cap",
-			"adress": "Južnomoravskih brigada 173 Leskovac",
-			"cityId": 3
-
-		},
-		{
-			"id": 3,
-			"name":"Princ",
-			"adress": "Bore Stankovica 21 Leskovac",
-			"cityId": 3
-
-		},
-		{
-			"id": 4,
-			"name":"Night&Day",
-			"adress": "TPC Kalča Bi-43 bb, Obrenovićeva, Niš",
-			"cityId": 2
-
-		},
-		{
-			"id": 5,
-			"name":"Careva Ćuprija",
-			"adress": "Bulevaru Vojvode Mišića Beograd",
-			"cityId": 1
-
-		}
-	],
-	"cinemas":[
-		{
-			"id": 2,
-			"name":"Cineplex",
-			"adress": "Usce Shoping Cenatr Beograd",
-			"cityId": 1
-		},
-		{
-			"id": 3,
-			"name":"Vilin Grad",
-			"adress": "Obrenovićeva 19 Nis",
-			"cityId": 2
-		},
-		{
-			"id": 4,
-			"name":"LKC",
-			"adress": "Bulevar Oslobodjenja 101 Leskovac",
-			"cityId": 3
-		},
-		{
-			"id": 5,
-			"name":"BGC",
-			"adress": "Bulevar Oslobodjenja 101 Beograd",
-			"cityId": 1
-		}
-
-	],
-	"category":[
-		{
-			"id": 1,
-			"name": "Restaurant",
-			"image": "/Restaurant.JPG"
-		},
-		{
-			"id": 2,
-			"name": "Cinema",
-			"image": "/Cinema.JPG"
-		}
-	],
-	"reviews":[
-		{
-			"id":1,
-			"name":"Best restaurant ever",
-			"text":"This place is great! They have a great selection. I ordered the plaintain & taro chips, a shrimp arepas and the yuca beignets! All were delicious! The arepas itself was light and had good flavor. The shrimp was cooked well and was super juicy! Although I wish I had cut up the shrimp so it could get a piece in every bite. I bit it once and I ate the whole shrimp on accident. Whoops nonetheless it was yummy. ",
-			"restaurantId":2,
-			"cinemaId": null
-		},
-		{
-			"id":2,
-			"name":"Most awesome place ever",
-			"text":"My husband and I visited today for the first time. We were drawn in by a full restaurant on a Thursday afternoon, so we knew it had to be good.We were SO pleasantly surprised. The food was so delicious and exactly what we wanted to fill us up and leave us feeling great the rest of the day. I had the plantains, coconut rice, beans, and shrimp and it was perfectly balanced. ",
-			"restaurantId":2,
-			"cinemaId": null
-		},
-		{
-			"id":3,
-			"name":"Nothing special about this place",
-			"text":"I enjoyed the food here. The flavors are great. I just think the portions are minuscule. Especially for what you're paying. Just beware of that. My friend was visiting one beautiful, sunny weekend and this was our first food stop. He had the Shredded Beef Pabellón. The plaintains were still steaming when the order came out. I had the Pulled Pork Pernil. I was obsessed with the creamy roasted pepper sauce at the table.  ",
-			"restaurantId":3,
-			"cinemaId": null
-		},
-		{
-			"id":4,
-			"name":"Very Fine place",
-			"text":"My gluten-free friend was going to visit me for the weekend. She really wanted to try out this place because it is naturally 100% gluten-free. I texted my bf and asked if he wanted to come as well. He texted me back with the surprised pikachu meme that has been famous for a while. Usually, he gets concerned about trying places that don't have gluten in their food. He decided to come with us anyways.",
-			"restaurantId":4,
-			"cinemaId": null
-		},
-		{
-			"id":5,
-			"name":"I fell in love with this restaurant",
-			"text":"Pica pica and I ain't talking Pokémon! I made annoying pikachu noises in the car as we drove by, and didn't realize this was the restaurant I was going to eat and fall in love with. This place is the shizzle! If anything, I wish the restaurant was larger to accommodate larger parties. ",
-			"restaurantId":4,
-			"cinemaId": null
-		},
-		{
-			"id":6,
-			"name":"Very Nice Kafana",
-			"text":"I do believe they make the best Cachapas on the planet. I had my very first Cachapas here and have since scoured the world for Venezuelan restaurants that have Cachapas on their menu to see how they compare. I've tried many places in the US and even a few in South America, to no avail. These are still the best Cachapas I have ever tried anywhere.",
-			"restaurantId":5,
-			"cinemaId": null
-		},
-		{
-			"id":7,
-			"name":"I recomment this place to everyone",
-			"text":"Check this place out! I've never had an arepa before, but now I'm hooked. This place is rather small though, with not many available seating, so I'd recommend to be prepared to either come here before rush hour or be ready to get your order to-go.I would recommend getting the traditional white arepa since it isn't as sweet as the yellow arepa, but either is delicious. Super moist on the inside and it pairs so well with the savoriness of the meat. I've tried the beef one, and it was so juicy and full of flavor.",
-			"restaurantId":5,
-			"cinemaId": null
-		},
-		{
-			"id":8,
-			"name":"I didnt like this place that much",
-			"text":"Stopped by to try Pica Pica - overall we were a little disappointed in the food, perhaps due to our choices from the recommendations.The yuca fries with guasacaca was a great started as was the sangria.",
-			"restaurantId":5,
-			"cinemaId": null
-		},
-		{
-			"id":9,
-			"name":"Il be back!",
-			"text":"So delicious! I'm a recently diagnosed celiac and eating out has been a frightening experience...not so at Pica Pica since it's a designated gluten free facility! This was my first time trying Venezuelan food. I ordered an arepa with blackened beef and a side of platanos. Everything was so juicy and flavorful! Service was quick...I went on a Wednesday at around 7:00. I will definitely be back, ",
-			"restaurantId":4,
-			"cinemaId": null
-		},
-		{
-			"id":10,
-			"name":"Il be back!",
-			"text":"So delicious! I'm a recently diagnosed celiac and eating out has been a frightening experience...not so at Pica Pica since it's a designated gluten free facility! This was my first time trying Venezuelan food. I ordered an arepa with blackened beef and a side of platanos. Everything was so juicy and flavorful! Service was quick...I went on a Wednesday at around 7:00. I will definitely be back, ",
-			"restaurantId":null,
-			"cinemaId": 2
-		}
-	]
+  "cities": [
+    {
+      "id": 2,
+      "name": "Nis",
+      "image": "/Nis.JPG",
+      "description": "Ниш је највећи град у југоисточној Србији и седиште Нишавског управног округа. На подручју Града Ниша је, према попису из 2011, живело 260.237 становника, док је у самом насељеном месту живело 183.164 становника,[1] па је тако по броју становника Ниш трећи град по величини у Србији (после Београда и Новог Сада)."
+    },
+    {
+      "id": 3,
+      "name": "Leskovac",
+      "image": "/Leskovac.JPG",
+      "description": "Лесковац је градско насеље и административни центар истоимене територијалне јединице и Јабланичког управног округа. Статус града добио је 2007. године. Град се налази у Лесковачкој котлини, познатој по српском петоречју. Према попису из 2011, у самом Лесковцу живело је 60.288 становника, док је на подручју града Лесковца живело 144.206 становника."
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 2,
+      "name": "Cap cap",
+      "adress": "Južnomoravskih brigada 173 Leskovac",
+      "cityId": 3
+    },
+    {
+      "id": 3,
+      "name": "Princ",
+      "adress": "Bore Stankovica 21 Leskovac",
+      "cityId": 3
+    },
+    {
+      "id": 4,
+      "name": "Night&Day",
+      "adress": "TPC Kalča Bi-43 bb, Obrenovićeva, Niš",
+      "cityId": 2
+    },
+    {
+      "id": 5,
+      "name": "Careva Ćuprija",
+      "adress": "Bulevaru Vojvode Mišića Beograd",
+      "cityId": 1
+    }
+  ],
+  "cinemas": [
+    {
+      "id": 2,
+      "name": "Cineplex",
+      "adress": "Usce Shoping Cenatr Beograd",
+      "cityId": 1
+    },
+    {
+      "id": 3,
+      "name": "Vilin Grad",
+      "adress": "Obrenovićeva 19 Nis",
+      "cityId": 2
+    },
+    {
+      "id": 4,
+      "name": "LKC",
+      "adress": "Bulevar Oslobodjenja 101 Leskovac",
+      "cityId": 3
+    },
+    {
+      "id": 5,
+      "name": "BGC",
+      "adress": "Bulevar Oslobodjenja 101 Beograd",
+      "cityId": 1
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Restaurant",
+      "image": "/Restaurant.JPG"
+    },
+    {
+      "id": 2,
+      "name": "Cinema",
+      "image": "/Cinema.JPG"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Best restaurant ever",
+      "text": "This place is great! They have a great selection. I ordered the plaintain & taro chips, a shrimp arepas and the yuca beignets! All were delicious! The arepas itself was light and had good flavor. The shrimp was cooked well and was super juicy! Although I wish I had cut up the shrimp so it could get a piece in every bite. I bit it once and I ate the whole shrimp on accident. Whoops nonetheless it was yummy. ",
+      "restaurantId": 2,
+      "cinemaId": null
+    },
+    {
+      "id": 2,
+      "name": "Most awesome place ever",
+      "text": "My husband and I visited today for the first time. We were drawn in by a full restaurant on a Thursday afternoon, so we knew it had to be good.We were SO pleasantly surprised. The food was so delicious and exactly what we wanted to fill us up and leave us feeling great the rest of the day. I had the plantains, coconut rice, beans, and shrimp and it was perfectly balanced. ",
+      "restaurantId": 2,
+      "cinemaId": null
+    },
+    {
+      "id": 3,
+      "name": "Nothing special about this place",
+      "text": "I enjoyed the food here. The flavors are great. I just think the portions are minuscule. Especially for what you're paying. Just beware of that. My friend was visiting one beautiful, sunny weekend and this was our first food stop. He had the Shredded Beef Pabellón. The plaintains were still steaming when the order came out. I had the Pulled Pork Pernil. I was obsessed with the creamy roasted pepper sauce at the table.  ",
+      "restaurantId": 3,
+      "cinemaId": null
+    },
+    {
+      "id": 4,
+      "name": "Very Fine place",
+      "text": "My gluten-free friend was going to visit me for the weekend. She really wanted to try out this place because it is naturally 100% gluten-free. I texted my bf and asked if he wanted to come as well. He texted me back with the surprised pikachu meme that has been famous for a while. Usually, he gets concerned about trying places that don't have gluten in their food. He decided to come with us anyways.",
+      "restaurantId": 4,
+      "cinemaId": null
+    },
+    {
+      "id": 5,
+      "name": "I fell in love with this restaurant",
+      "text": "Pica pica and I ain't talking Pokémon! I made annoying pikachu noises in the car as we drove by, and didn't realize this was the restaurant I was going to eat and fall in love with. This place is the shizzle! If anything, I wish the restaurant was larger to accommodate larger parties. ",
+      "restaurantId": 4,
+      "cinemaId": null
+    },
+    {
+      "id": 6,
+      "name": "Very Nice Kafana",
+      "text": "I do believe they make the best Cachapas on the planet. I had my very first Cachapas here and have since scoured the world for Venezuelan restaurants that have Cachapas on their menu to see how they compare. I've tried many places in the US and even a few in South America, to no avail. These are still the best Cachapas I have ever tried anywhere.",
+      "restaurantId": 5,
+      "cinemaId": null
+    },
+    {
+      "id": 7,
+      "name": "I recomment this place to everyone",
+      "text": "Check this place out! I've never had an arepa before, but now I'm hooked. This place is rather small though, with not many available seating, so I'd recommend to be prepared to either come here before rush hour or be ready to get your order to-go.I would recommend getting the traditional white arepa since it isn't as sweet as the yellow arepa, but either is delicious. Super moist on the inside and it pairs so well with the savoriness of the meat. I've tried the beef one, and it was so juicy and full of flavor.",
+      "restaurantId": 5,
+      "cinemaId": null
+    },
+    {
+      "id": 8,
+      "name": "I didnt like this place that much",
+      "text": "Stopped by to try Pica Pica - overall we were a little disappointed in the food, perhaps due to our choices from the recommendations.The yuca fries with guasacaca was a great started as was the sangria.",
+      "restaurantId": 5,
+      "cinemaId": null
+    },
+    {
+      "id": 9,
+      "name": "Il be back!",
+      "text": "So delicious! I'm a recently diagnosed celiac and eating out has been a frightening experience...not so at Pica Pica since it's a designated gluten free facility! This was my first time trying Venezuelan food. I ordered an arepa with blackened beef and a side of platanos. Everything was so juicy and flavorful! Service was quick...I went on a Wednesday at around 7:00. I will definitely be back, ",
+      "restaurantId": 4,
+      "cinemaId": null
+    },
+    {
+      "id": 10,
+      "name": "Il be back!",
+      "text": "So delicious! I'm a recently diagnosed celiac and eating out has been a frightening experience...not so at Pica Pica since it's a designated gluten free facility! This was my first time trying Venezuelan food. I ordered an arepa with blackened beef and a side of platanos. Everything was so juicy and flavorful! Service was quick...I went on a Wednesday at around 7:00. I will definitely be back, ",
+      "restaurantId": null,
+      "cinemaId": 2
+    }
+  ]
 }
